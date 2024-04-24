@@ -11,4 +11,4 @@
         Your browser does not support the video tag.
     </video>
 </div>
-![后台管理系统功能演示](./document/resource/mall_admin_show.png)
+![系统功能演示](./document/resource/show1.png)
