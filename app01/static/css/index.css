@@ -1,0 +1,108 @@
+.SBtn {
+    font-size: 15px;
+    color: #fff;
+    background-color: #f9513b;
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    width: 100%;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+.mall {
+    float: left;
+    color: #999;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+}
+
+.date {
+    float: right;
+    color: #999;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+}
+
+.pic {
+    float: left;
+    overflow: hidden;
+}
+
+.pic img {
+    width: 147px;
+    height: 147px;
+}
+
+.tit {
+    line-height: 22px;
+    margin-top: 1px;
+    position: relative;
+    float: right;
+    font-weight: normal;
+    margin-right: 15px;
+    background-color: #FBFBFB;
+    font-size: 14px;
+    padding: 0;
+}
+
+.tit a {
+    color: #333333;
+    height: 44px;
+    display: inline-block;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.price p {
+    color: #F8653F;
+    margin-top: 8px;
+    font-size: 14px;
+    height: 22px;
+    line-height: 35px;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.vol {
+    font-size: 5px;
+    width: 137px;
+    height: 18px;
+    color: #0f0f0f;
+}
+
+.limit {
+    font-size: 1px;
+    width: 75px;
+    height: 14px;
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.info {
+    width: 147px;
+    height: 36px;
+    margin-bottom: 5px;
+}
+
+.list-group-item {
+    height: 300px;
+}
+
+.pagination {
+    width: 100%;
+
+}

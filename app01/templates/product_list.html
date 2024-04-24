@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href={% static 'css/index.css' %}>
+{% endblock %}
+{% block content %}
+    <div>
+        <div class="container">
+            <div style="margin-bottom: 10px" class="clearfix">
+                <form method="get" id="form1">
+                    <div style="float: right;width: 300px">
+                        <div class="input-group">
+                            <input type="text" name="query" class="form-control" placeholder="请输入商品名称"
+                                   value="{{ search_data }}" id="query">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default SBtn" type="submit" style="background-color: red"
+                                        id="btn">
+                                    搜索
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div style="float: right;width: 128px">
+                        <div class="input-group">
+                            <select class="form-control" name="opt" id="opt">
+                                <option value="def" selected>综合排序</option>
+                                <option value="pri_o">按价格升序</option>
+                                <option value="pri_d">按价格降序</option>
+                                <option value="tim_o">按时间升序</option>
+                                <option value="tim_d">按时间降序</option>
+                            </select>
+                            <input value="{{ order_type }}" id="ord_data" type="hidden">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bs-example" data-example-id="panel-without-body-with-table">
+                <div class="panel panel-default">
+                    <ul class="list-group">
+                        {% for obj in queryset %}
+                            <li class="list-group-item" style="float: left;width: 167px;">
+                                <div class="pic">
+                                    <a href="{{ obj.goods_link }}" target="_blank">
+                                        <img src="{{ obj.goods_img }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="tit">
+                                    <a href="{{ obj.goods_link }}" target="_blank">{{ obj.goods_title }}</a>
+                                </div>
+                                <div class="price">
+                                    <p><i>¥</i>{{ obj.goods_price }}</p>
+                                </div>
+                                <div class="vol">
+                                    <i>销量{{ obj.goods_sales }}</i>
+                                    <span class="limit">{{ obj.shop_title }}</span>
+                                </div>
+                                <div class="info">
+                                    <span class="mall">{{ obj.shop_platform }}</span>
+                                    <span class="date">{{ obj.grab_time}}</span>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <ul class="pagination">
+                    {{ page_string }}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block js %}
+        <script>
+            $(document).ready(function () {
+                $("#opt").val($("#ord_data").val());
+            });
+            $("#opt").change(function () {
+                $("#form1").submit();
+            });
+        </script>
+    {% endblock %}
+{% endblock %}

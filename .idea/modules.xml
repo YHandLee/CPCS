@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CPCS.iml" filepath="$PROJECT_DIR$/.idea/CPCS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../djangoday16/.idea/djangoday16.iml" filepath="$PROJECT_DIR$/../djangoday16/.idea/djangoday16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../handle_excel/.idea/handle_excel.iml" filepath="$PROJECT_DIR$/../handle_excel/.idea/handle_excel.iml" />
+    </modules>
+  </component>
+</project>
