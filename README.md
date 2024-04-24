@@ -17,7 +17,7 @@
 
 ``` lua
 CPCS
-├── app01 -- 工具类及通用代码
+├── app01 -- 包含所有代码
       ├── grab_goods -- 爬取商品数据代码
       ├── migrations -- django生成数据库的代码
       ├── static -- 前端CSS和JS代码包
